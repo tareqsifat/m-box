@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OEKO-TEX® Label Check – Detail</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="css/app.css">
   <link rel="stylesheet" href="css/additional.css">
   <!-- Font Awesome for icons (optional, but helps with social icons) -->
@@ -17,7 +19,7 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-family: Outfit, Arial, sans-serif;
       color: #1e1e1e;
       background: #ffffff;
       line-height: 1.5;
@@ -36,7 +38,7 @@
       --footer-bg: #1e1e1e;
       --max-width: 1200px;
       --border-radius: 6px;
-      --font-heading: 'Inter', sans-serif;
+      --font-heading: Outfit, Arial, sans-serif;
     }
 
     .container {
@@ -57,7 +59,8 @@
     .header-left {
       display: flex;
       align-items: center;
-      gap: 32px;
+      gap: 0;
+      padding-top: 40px;
     }
 
     .search-icon {
@@ -108,7 +111,7 @@
       color: #fff;
       border: none;
       padding: 10px 22px;
-      font-size: 14px;
+      font-size: 1rem;
       font-weight: 500;
       display: flex;
       align-items: center;
@@ -674,6 +677,247 @@
         font-size: 14px;
       }
     }
+
+    /* ---------- OEKO-TEX LOOK OVERRIDES ---------- */
+    button, input { font-family: inherit; }
+    .container { max-width: none; padding: 0 70px; }
+    main.container { max-width: 1400px; }
+
+    .header { padding: 30px 70px 0; align-items: flex-start; position: relative; min-height: 160px; }
+    .header-nav { gap: 32px; font-size: 17px; font-weight: 500; }
+    .search-icon svg { width: 24px; height: 24px; }
+    .logo { top: 30px; }
+    .logo svg { height: 130px; }
+    .menu-btn { width: 160px; height: 50px; justify-content: center; font-weight: 600; padding: 0; margin-top: 20px; }
+
+    .breadcrumb-wrap { padding: 20px 0 0; font-size: 15px; }
+    .breadcrumb { justify-content: center; gap: 0; }
+    .breadcrumb li:first-child a { background: #000; color: #fff; padding: 6px 5px; display: inline-block; position: relative; margin-bottom: 0; }
+    .breadcrumb li:not(:last-child)::after { margin: 0 8px; }
+    .breadcrumb a, .breadcrumb .active { color: #000; font-weight: 400; }
+    .breadcrumb li:first-child a { color: #fff; }
+
+    .main-title { font-size: 64px; font-weight: 500; margin: 60px 0 70px; letter-spacing: -0.01em; }
+    .main-title sup { font-size: 0.6em; vertical-align: baseline; position: relative; top: -0.6em; line-height: 0; }
+
+    .search-section { max-width: 730px; }
+    .search-label { font-size: 15px; color: #1e1e1e; }
+    .search-row { border-bottom: 1px solid #1e1e1e; padding: 0; align-items: flex-end; }
+    .search-row input { font-size: 24px; padding: 10px 0; }
+    .search-row .check-btn { height: 50px; margin-bottom: -1px; font-size: 17px; font-weight: 600; padding: 0 44px; }
+    .withdrawn-link { font-weight: 600; margin-top: 50px; font-size: 16px; }
+
+    .result-status { max-width: 1030px; margin: 100px auto 64px; }
+    .result-status h2, .cert-title { font-weight: 500; }
+    .result-status h2 { font-size: 64px; }
+    .cert-title { font-size: 40px; }
+    .chatbot-btn { padding: 16px 24px; font-size: 17px; bottom: 30px; right: 12px; }
+
+    .breadcrumb li:first-child a::before { content: ''; position: absolute; left: 0; top: 100%; width: 5px; height: 16px; background: #000; }
+    .search-row .clear-btn { height: 50px; align-self: flex-end; font-weight: 200; }
+    .search-row .clear-btn, .search-row .clear-btn * { color: #000; }
+
+    @media (max-width: 992px) {
+      .container, .header { padding-left: 24px; padding-right: 24px; }
+      .main-title, .result-status h2 { font-size: 40px; }
+    }
+    @media (max-width: 768px) {
+      .main-title, .result-status h2 { font-size: 30px; }
+      .header { min-height: 100px; }
+      .logo svg { height: 70px; }
+      .menu-btn { width: auto; padding: 0 16px; }
+    }
+
+    /* ---------- LOWER PAGE OVERRIDES ---------- */
+    .result-status { max-width: 1115px; padding: 0; }
+    .result-status h2 { font-size: 60px; }
+    .verified-badge svg { width: 160px; height: 160px; }
+    .cert-logo { margin-bottom: 40px; }
+    .cert-title { font-size: 44px; margin-bottom: 6px; }
+    .cert-title sup { font-size: 0.55em; vertical-align: baseline; position: relative; top: -0.5em; line-height: 0; }
+    .cert-subtitle { margin-top: 0; font-size: 18px; font-weight: 400; margin-bottom: 40px; color: #000; }
+    .certificate-card { max-width: 700px; }
+    .info-block, .article-type { background: #f7f7f7; padding: 32px 36px; margin-bottom: 0; }
+    .info-block h3, .article-type h3 { font-size: 18px; font-weight: 500; margin-bottom: 28px; }
+    .info-block address, .article-type p { font-size: 14px; line-height: 1.6; color: #000; }
+    .info-row { background: #e0e0e0; padding: 28px 36px; margin-bottom: 0; }
+    .info-row .label, .info-row .value { font-size: 18px; font-weight: 500; }
+    .info-row .value { text-align: left; padding-left: 0; }
+    .newsletter-section { max-width: 1115px; border: 0; padding: 70px 0 80px; gap: 90px; }
+    .newsletter-left h2 { font-size: 60px; font-weight: 500; line-height: 1.1; }
+    .newsletter-left h2 sup { font-size: 0.5em; vertical-align: baseline; position: relative; top: -0.5em; }
+    .newsletter-right label { font-size: 13px; color: #000; }
+    .newsletter-form { border-bottom: 1px solid #000; padding: 0; align-items: flex-end; }
+    .newsletter-form input { font-size: 22px; padding: 10px 4px; }
+    .newsletter-form input::placeholder { color: #8a8a8a; }
+    .newsletter-form button { height: 50px; margin-bottom: -1px; font-weight: 600; }
+
+    .footer { background: #2b2b2b; padding: 110px 0 190px; }
+    .footer-grid { max-width: 1115px; padding: 0; grid-template-columns: 1.2fr 1.2fr 1.6fr 1fr; gap: 30px; }
+    .footer-col h4 { font-size: 14px; margin-bottom: 30px; font-weight: 600; }
+    .footer-col li { margin-bottom: 14px; font-size: 13px; }
+    .footer-col a, .footer-col address { color: #d9d9d9; font-size: 14px; }
+    .footer-col address { margin-top: 0; }
+    .footer-col address { line-height: 2; }
+    .footer-social { display: grid; grid-template-columns: repeat(3, 52px); gap: 22px 0; margin-top: -4px; }
+    .footer-social a { line-height: 0; width: auto; height: auto; border: 0; border-radius: 0; font-size: 26px; color: #bdbdbd; }
+    .footer-bar { background: #222; padding: 50px 0 60px; }
+    .footer-bar .footer-bottom { margin: 0 auto; max-width: 1115px; padding: 0; border: 0; justify-content: flex-start; gap: 26px; font-size: 13px; color: #9e9e9e; }
+    .footer-bar .footer-bottom a { margin-left: 0; }
+    .footer-bar .legal-links { gap: 8px 14px; }
+    .to-top { position: fixed; right: 12%; bottom: 190px; width: 66px; height: 66px; border-radius: 50%; background: #fff; border: 0; box-shadow: 0 2px 12px rgba(0,0,0,.2); cursor: pointer; z-index: 998; font-size: 16px; }
+    .share-btn { position: fixed; right: 12px; bottom: 100px; width: 56px; height: 56px; border-radius: 50%; background: #000; color: #fff; border: 0; z-index: 998; font-size: 20px; cursor: pointer; }
+    @media (max-width: 992px) { .footer-grid { grid-template-columns: 1fr 1fr; } .footer-bar .footer-bottom, .footer-grid { padding: 0 24px; } .newsletter-left h2 { font-size: 40px; } }
+    @media (max-width: 768px) { .footer-grid { grid-template-columns: 1fr; } .to-top { right: 16px; } }
+
+    /* fixed logo & menu, tighter result row */
+    .logo { position: fixed; top: 30px; z-index: 1000; }
+    .menu-btn { position: fixed; top: 50px; right: 70px; z-index: 1000; margin-top: 0; }
+    .result-status { max-width: 960px; }
+    .result-status h2 { font-size: 63px; }
+    @media (max-width: 992px) { .menu-btn { right: 24px; } .result-status h2 { font-size: 40px; } }
+    @media (max-width: 768px) { .logo { transform: translateX(-50%); left: 50%; margin: 0; } .logo svg { height: 70px; } .result-status h2 { font-size: 30px; } }
+
+    /* logo shrink on scroll */
+    .logo svg { width: 128px; height: 128px; filter: drop-shadow(0 4px 8px rgba(0,0,0,.28)); transition: width .3s ease, height .3s ease; }
+    .logo.is-scrolled svg { width: 84px; height: 84px; }
+    @media (max-width: 768px) { .logo svg { width: 70px; height: 70px; } .logo.is-scrolled svg { width: 50px; height: 50px; } }
+
+    /* review fixes */
+    .breadcrumb-wrap { padding-top: 32px; }
+    .main-title { margin: 35px 0 70px; font-size: 63px; }
+    .search-row { border-bottom: 1px dotted #000; }
+    .search-row .check-btn { padding: 0 36px; }
+    .withdrawn-link { margin-top: 53px; }
+    .result-status { margin-top: 37px; transform: translateX(-30px); }
+    .share-btn { right: 64px; bottom: 81px; }
+    .chatbot-btn { bottom: 12px; }
+    @media (max-width: 992px) { .result-status { transform: none; } .share-btn { right: 12px; } }
+
+    /* pixel pass 2 */
+    .header { padding-left: 68px; }
+    .header-nav { gap: 34px; font-size: 16px; }
+    .menu-btn { gap: 14px; box-shadow: 0 2px 6px rgba(0,0,0,.35); }
+    .menu-btn i { font-size: 28px; }
+    .breadcrumb-wrap { padding-top: 34px; font-size: 14px; }
+    .breadcrumb li:first-child a { padding: 3px 0 3px 5px; line-height: 21px; }
+    .breadcrumb li:first-child a::before { height: 14px; }
+    .main-title { margin: 40px 0 70px; font-size: 62px; }
+    .main-title sup { font-size: 0.75em; top: -0.2em; }
+    .search-row { align-items: flex-end; padding-right: 5px; border-bottom: 1px dotted #555; }
+    .search-row input { height: 50px; padding: 0 5px 12px; margin-bottom: 4px; box-sizing: border-box; }
+    .search-row .clear-btn { height: 50px; margin-bottom: 4px; padding: 0 24px 12px; align-items: center; }
+    .search-row .check-btn { height: 50px; margin-bottom: 4px; font-size: 16px; padding: 0 40px; }
+    .withdrawn-link { margin-top: 48px; }
+    .wd-arrow { color: #888; font-weight: 400; margin-left: 4px; }
+    .result-status { align-items: flex-start; transform: translateX(-76px); }
+    .result-status h2 { line-height: 76px; }
+    .verified-badge { margin-top: -7px; }
+    .verified-badge svg { width: 168px; height: 168px; }
+    .share-btn { width: 50px; height: 50px; right: 70px; bottom: 77px; display: flex; align-items: center; justify-content: center; }
+    .chatbot-btn { flex-direction: row-reverse; height: 48px; padding: 0 24px; font-size: 15px; bottom: 9px; right: 12px; gap: 14px; }
+    @media (max-width: 992px) { .share-btn { right: 12px; } .header { padding-left: 24px; } .result-status { transform: none; } }
+
+    /* pixel pass 3 */
+    .main-title { margin-bottom: 72px; }
+    .main-title sup { font-size: 0.95em; top: -0.12em; }
+    .search-label { margin-bottom: 14px; }
+    .search-row input { padding-left: 7px; }
+    .withdrawn-link { margin-top: 47px; }
+    .result-status { margin-top: 79px; max-width: 966px; transform: translateX(-70px); }
+    .menu-btn i { font-size: 26px; }
+    .chatbot-btn { right: 7px; bottom: 16px; }
+    .share-btn { right: 65px; bottom: 84px; }
+    .to-top { opacity: 0; pointer-events: none; transition: opacity .3s; }
+    .to-top.show { opacity: 1; pointer-events: auto; }
+    @media (max-width: 992px) { .result-status { transform: none; } }
+
+    /* pixel pass 4 (measured against design) */
+    body, .main-title, .search-row input, .search-label, .withdrawn-link, .result-status h2 { color: #000; }
+    .breadcrumb-wrap { padding-top: 33px; }
+    .main-title { font-size: 61px; margin-top: 41px; }
+    .main-title sup { top: -0.04em; }
+    .breadcrumb li:not(:last-child)::after { margin: 0 7px; }
+    .breadcrumb li:first-child::after { margin-left: 13px; }
+    .search-label { font-size: 14px; }
+    .search-row input { font-size: 25px; padding-left: 5px; }
+    .search-row .clear-btn { padding-right: 27px; }
+    .withdrawn-link { font-size: 16.3px; }
+
+    /* pixel pass 5 */
+    .main-title { margin: 42px 0 72px; font-size: 61.4px; }
+    .search-label { margin-bottom: 15px; }
+    .withdrawn-link { margin-top: 48px; }
+    .result-status { margin-top: 78px; transform: translateX(-72px); }
+    .verified-badge svg text { font-weight: 600; }
+
+    /* pixel pass 6 */
+    .header-nav { font-weight: 600; gap: 33px; }
+    .header-nav a { color: #000; }
+    .search-icon svg { stroke-width: 1.6; }
+    .menu-btn { gap: 15px; }
+    .chatbot-btn { right: 12px; bottom: 9px; box-shadow: 0 0 30px rgba(0,0,0,.18); }
+    .share-btn { right: 70px; bottom: 77px; box-shadow: 0 0 30px rgba(0,0,0,.18); }
+    @media (max-width: 992px) { .share-btn { right: 12px; } }
+    .main-title sup { font-size: 0.95em; top: -0.03em; }
+
+    /* pixel pass 7 */
+    .menu-btn { height: 50px; padding-top: 0; }
+    .menu-btn svg path { stroke-width: 2.6; }
+    .logo svg { filter: drop-shadow(0 2px 4px rgba(0,0,0,.22)); }
+    .breadcrumb { padding-left: 2px; }
+    .breadcrumb li:not(:last-child)::after { margin: 0 6px 0 5px; color: #aaa; }
+    .breadcrumb li:first-child::after { margin: 0 8px 0 9px; }
+
+    /* pixel pass 8 */
+    .header-nav { gap: 33.5px; font-size: 15.9px; }
+    .breadcrumb { padding-left: 0; }
+    .breadcrumb li:not(:last-child)::after { margin: 0 7px 0 6px; }
+    .breadcrumb li:first-child::after { margin: 0 9px 0 10px; }
+    .logo svg { filter: drop-shadow(0 2px 7px rgba(0,0,0,.2)); transition: width .25s ease-in-out .3s, height .25s ease-in-out .3s; }
+
+    /* design-original colors & nav css */
+    body, .main-title, .search-row input, .search-label, .withdrawn-link, .result-status h2 { color: #050505; }
+    .header-nav { gap: 0; font-size: 1rem; font-weight: 400; line-height: 1.5; }
+    .header-nav a {
+      background-image: linear-gradient(90deg, #000);
+      background-position: 0 100%;
+      background-repeat: no-repeat;
+      background-size: 0 1px;
+      color: #000;
+      font-weight: 500;
+      margin-left: 30px;
+      padding-bottom: 5px;
+      transition: background-size .25s ease-in-out;
+    }
+    .header-nav a:hover { background-size: 100% 1px; color: #000; }
+    .header-nav a:nth-child(n+2) { margin-left: 33px; }
+    .header-nav a:first-child { margin-left: 28px; }
+
+    /* menu button (from design css) */
+    .menu-btn { background: #000; color: #fff; border: none; border-radius: 0; box-shadow: 0 2px 7px 0 rgba(0,0,0,.2); transition: all .25s ease-in-out; gap: 15px; }
+    .menu-btn svg { margin-left: 0; }
+    .menu-btn:active, .menu-btn:focus, .menu-btn:hover { background: #fff; color: #000; }
+
+    /* menu icon via ::after, using the real oekotex icon font */
+    @font-face { font-family: oekotex; font-style: normal; font-weight: 400; font-display: swap; src: url(fonts/oekotex.woff) format("woff"); }
+    .menu-btn { gap: 0; }
+    .menu-btn::after {
+      content: "\e915";
+      display: inline-block;
+      font-family: oekotex !important;
+      position: relative;
+      speak: none;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+      line-height: 1;
+      text-transform: none;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-size: 25px;
+      margin-left: 15px;
+    }
   </style>
 </head>
 <body>
@@ -694,16 +938,11 @@
     </div>
 
     <div class="logo">
-      <!-- OEKO-TEX logo SVG (simplified from original) -->
-      <svg viewBox="0 0 200 200" width="80" height="80">
-        <circle cx="100" cy="100" r="90" fill="#00a687" />
-        <text x="100" y="85" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="38" fill="#fff">OEKO</text>
-        <text x="100" y="125" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="38" fill="#fff">TEX®</text>
-      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="212.6 212.6 425.2 425.2" aria-hidden="true"><g><path fill="#00A687" d="M275.3,575.2c45.6,45.6,102.6,62.6,151.1,62.6c59.1,0,118.6-23.9,155.6-66.4c37-42.5,55.9-96,55.9-171.8v-187h-187c-77.1,0-126.4,23.6-152.6,41.1c-27.1,18.2-75.2,66.9-84.3,146.1C206.8,462.2,227.3,527.3,275.3,575.2"/><g fill="#FFF"><path d="M352.4,409.2c6.1-7.3,9.2-17.4,9.2-30.3c0-12.7-3-22.6-9-29.7c-6-7.1-14.5-10.6-25.5-10.6c-7.2,0-13.5,1.6-18.8,4.8c-5.3,3.2-9.4,7.9-12.4,14c-2.9,6.2-4.4,13.4-4.4,21.6c0,8.3,1.3,15.6,4,21.8c2.7,6.2,6.6,11,11.7,14.3c5.2,3.3,11.5,5,19,5C337.5,420.1,346.2,416.5,352.4,409.2z M312.8,399.9c-3.2-5-4.9-12-4.9-20.9c0-8.8,1.6-15.7,4.9-20.4c3.2-4.8,8-7.2,14.2-7.2c5.9,0,10.5,2.4,13.6,7.2c3.1,4.8,4.7,11.6,4.7,20.4c0,9-1.6,16-4.8,20.9c-3.2,5-7.8,7.5-13.8,7.5C320.6,407.4,316,404.9,312.8,399.9z"/><path d="M425.5,416.2c0-0.6,0.1-1.3,0.1-2.2c0-2.6-0.8-4.7-2.5-6.1c-1.7-1.4-4-2.2-7.1-2.2h-24.7v-21.5h24.5v-12.4h-24.5v-19.2H414c3.5,0,6.1-0.6,7.6-1.9c1.5-1.2,2.3-3.3,2.3-6.3c0-1.7-0.1-3.1-0.3-4.3h-48.2v78h50.1C425.4,417.4,425.5,416.8,425.5,416.2z"/><path d="M452.5 378.6 c -1.5 4.4 2.2 8.2 5.7 12.7 l 17 22.1 c 3.1 4 7.2 6.1 12.4 6.1 c 3.1 0 6.1 -0.9 9.1 -2.7 l -28.8 -39.2 l 25.5 -34.3 c -1.1 -1.1 -2.4 -1.9 -4.1 -2.6 c -1.7 -0.6 -3.4 -0.9 -5.3 -0.9 c -2.2 0 -4.1 0.5 -5.8 1.5 c -1.7 1 -3.5 2.6 -5.1 4.8 l -15.8 20.9 c -1.5 2 -2.7 3.8 -3.4 5.4 c -0.7 1.6 -1.9 3.6 -1.3 4.8 v -28.4 c 0 -6 -3.4 -9.1 -10.3 -9.1 c -1.2 0 -3.1 0.2 -5.6 0.6 v 77.8 h 15.8 V 378.6 z"/><path d="M559.6,349.2c-6-7.1-14.5-10.6-25.5-10.6c-7.2,0-13.5,1.6-18.8,4.8c-5.3,3.2-9.4,7.9-12.4,14c-2.9,6.2-4.4,13.4-4.4,21.6c0,8.3,1.3,15.6,4,21.8c2.7,6.2,6.6,11,11.7,14.3c5.2,3.3,11.5,5,19,5c11.3,0,20.1-3.6,26.2-10.9c6.1-7.3,9.2-17.4,9.2-30.3C568.5,366.2,565.6,356.3,559.6,349.2z M547.4,400c-3.2,5-7.8,7.5-13.8,7.5c-6,0-10.6-2.5-13.9-7.5c-3.2-5-4.9-12-4.9-20.9c0-8.8,1.6-15.7,4.9-20.4c3.2-4.8,8-7.2,14.2-7.2c5.9,0,10.5,2.4,13.6,7.2c3.1,4.8,4.7,11.6,4.7,20.4C552.2,388,550.6,395,547.4,400z"/></g><path fill="#FFF" d="M540.8,446c-10.8,0-19.5,8.8-19.5,19.7s8.8,19.7,19.5,19.7c10.8,0,19.6-8.8,19.6-19.7S551.6,446,540.8,446z M540.8,480.8c-8.3,0-15-6.8-15-15.1c0-8.3,6.7-15.1,15-15.1c8.3,0,15,6.8,15,15.1C555.9,474,549.1,480.8,540.8,480.8z"/><path fill="#FFF" d="M545.7,466c0.4-0.3,0.8-0.7,1.2-1.2c0.4-0.5,0.6-1,0.8-1.6c0.2-0.6,0.3-1.3,0.3-2.1c0-1.9-0.6-3.3-1.9-4.3c-1.3-0.9-3.3-1.4-6.1-1.4c-0.7,0-1.5,0-2.4,0.1c-0.9,0.1-1.8,0.1-2.7,0.2v19.2h4v-7.3h1.6l3.3,5.6c0.4,0.7,0.8,1.2,1.3,1.5c0.5,0.3,1.1,0.5,1.8,0.5c0.4,0,0.7-0.1,1.2-0.1c0.4-0.1,0.8-0.2,1.1-0.4l-4.8-8C544.8,466.6,545.3,466.3,545.7,466z M542.9,464.1c-0.7,0.5-1.6,0.8-2.7,0.8h-1.3v-6.7c0.2,0,0.4,0,0.6-0.1c0.3,0,0.5,0,0.9,0c1.1,0,1.9,0.2,2.6,0.7c0.6,0.5,0.9,1.3,0.9,2.5C543.9,462.7,543.5,463.5,542.9,464.1z"/><path fill="#FFF" d="M330.8,446.5c-3,0-5.4,0.8-7.2,2.3c-1.8,1.5-2.7,3.6-2.7,6.1c0,1.7,0.1,3.3,0.3,4.7h24.2v64.9h16v-64.9H376c3,0,5.3-0.7,7-2.2c1.7-1.4,2.5-3.4,2.5-5.9c0-1.7-0.1-3.4-0.3-5H330.8z"/><path fill="#FFF" d="M435.5,512.1h-24.7v-21.5h24.5v-12.4h-24.5v-19.2h22.8c3.5,0,6.1-0.6,7.6-1.9c1.5-1.2,2.3-3.3,2.3-6.3c0-1.7-0.1-3.1-0.3-4.3h-48.2v78h50.1c0.1-0.7,0.1-1.3,0.2-1.9c0-0.6,0.1-1.3,0.1-2.2c0-2.6-0.8-4.7-2.5-6.1C440.9,512.8,438.6,512.1,435.5,512.1z"/><path fill="#FFF" d="M515.8,448.3c-2.9-1.5-5.7-2.3-8.4-2.3c-2.5,0-4.5,0.5-6.1,1.5c-1.6,1-3.1,2.8-4.7,5.5l-11.4,19.8L474,451.7c-1.9-3.8-5-5.7-9.3-5.7c-2.8,0-6.2,0.9-10.1,2.6l20.3,37l-22.9,38.9h17.3l14.8-25.7l11.9,19.9c1.5,2.6,3.2,4.5,4.9,5.5c1.7,1,4,1.6,6.7,1.6c2.8,0,5.9-0.6,9.1-1.7l-22.6-39L515.8,448.3z"/></g></g></svg>
     </div>
 
     <button class="menu-btn">
-      Menu <i class="fas fa-bars"></i>
+      Menu
     </button>
   </header>
 
@@ -726,11 +965,11 @@
     <div class="search-section">
       <label class="search-label" for="cert-input">Certificate / label number</label>
       <div class="search-row">
-        <input type="text" id="cert-input" value="24.HUS.86422" placeholder="Enter label number">
-        <button class="clear-btn" id="clear-input" aria-label="Clear">✕</button>
+        <input type="text" id="cert-input" value="VUTCH-18" placeholder="Enter label number">
+        <button class="clear-btn" id="clear-input" aria-label="Clear"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="#000" stroke-width="1.2" stroke-linecap="round"><path d="M2 2l14 14M16 2L2 16"/></svg></button>
         <button class="check-btn">check</button>
       </div>
-      <a href="#" class="withdrawn-link">Withdrawn certificates and labels →</a>
+      <a href="#" class="withdrawn-link">Withdrawn certificates and labels <span class="wd-arrow">›</span></a>
     </div>
 
     <!-- RESULT STATUS -->
@@ -738,10 +977,10 @@
       <h2>The certificate is valid</h2>
       <div class="verified-badge">
         <!-- Verified badge SVG -->
-        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="60" cy="60" r="50" stroke="#00a687" stroke-width="3" fill="none" />
-          <path d="M38 60 L52 74 L82 44" stroke="#00a687" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-          <text x="60" y="100" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" font-weight="600" fill="#00a687">Verified</text>
+        <svg viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M31.5 98 A56 56 0 1 0 31.5 42" stroke="#008f72" stroke-width="4" stroke-linecap="round" fill="none" />
+          <path d="M14 70 L26 82 L44 58" stroke="#008f72" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+          <text x="90" y="76" text-anchor="middle" font-family="Outfit, sans-serif" font-size="16" font-weight="500" fill="#008f72">Verified</text>
         </svg>
       </div>
     </div>
@@ -751,11 +990,12 @@
 
       <!-- STANDARD 100 logo -->
       <div class="cert-logo">
-        <svg viewBox="0 0 120 120" width="80" height="80">
-          <circle cx="60" cy="60" r="50" fill="#000" />
-          <text x="60" y="52" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#fff">OEKO</text>
-          <text x="60" y="72" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="#fff">TEX®</text>
-          <text x="60" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#fff">STANDARD 100</text>
+        <svg viewBox="0 0 120 150" width="90" height="112">
+          <path d="M60 5 A50 50 0 1 0 110 55 L110 5 Z" fill="#000" transform="translate(-0 0)" />
+          <text x="60" y="46" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="17" fill="#fff">OEKO</text>
+          <text x="60" y="66" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="17" fill="#fff">TEX®</text>
+          <text x="60" y="124" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="10" fill="#000">STANDARD</text>
+          <text x="60" y="137" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="10" fill="#000">100</text>
         </svg>
       </div>
 
@@ -766,36 +1006,33 @@
       <div class="info-block">
         <h3>Certificate owner</h3>
         <address>
-          Avocado Mattress LLC<br>
-          570 North Gilbert St<br>
-          92833 Fullerton<br>
-          United States
+          Áčko, a.s.<br>
+          Textilná 19<br>
+          034 01 Ružomberok<br>
+          Slovakia
         </address>
       </div>
 
       <!-- Product class -->
       <div class="info-row">
         <span class="label">Product class</span>
-        <span class="value">II</span>
+        <span class="value">I</span>
       </div>
 
       <!-- Article type -->
       <div class="article-type">
         <h3>Type of certified article</h3>
         <p>
-          Mattress, mattress topper, mattress protector, pillow and sheet sets produced from woven
-          and knitted fabric made of 100 % cotton, greige, bleached, reactive dyed and pigment
-          printed, with or without PUR resin and TPU transparent film lamination, with or without
-          softener finish, woven fabric made of viscose/wool, raw white and
-          acrylic/viscose/polyester/linen, white and dyed; with or without filling made of wool, alpaca
-          and kapok fiber and/or natural latex foam; with or without innerspring and pocket spring
-          core system made of steel wire, wrapped in non-woven fabric produced from 100 %
-          polypropylene, 100 % polyester and 100 % viscose from bamboo in raw white or white, with
-          ultrasonic welding; including accessories (sewing and embroidery thread, woven and
-          printed label, elastic tape, zipper, rosette made of 100 % acrylic or 100 % wool yarn [with
-          plastic hook and tie-off yarn], non-woven washer made of polyester, tufting tape made of
-          polyester [including silver metal clip]); produced using components partly pre-certified
-          according to OEKO-TEX® STANDARD 100.
+          Bed linen, bed sheets, antiallergic blankets and pillows, mattresses, children´s mattresses,
+          baby quilts and pillows, sleeping bags, matress protectors, crib bumpers, baldachins made
+          of woven and knitted fabrics from polyamide, Lyocell, cotton, polyester, cotton/polyester,
+          raw, white, reactive &amp; disperse dyed, digital printed on cotton &amp; polyester &amp; cotton/
+          polyester, w/wo PU coated on cotton &amp; polyester &amp; polyamide; made of knitted fabrics
+          from 100% viscose (Lenzing™), 100% viscose FR (Lenzing™), reactive dyed; made of
+          mattress knitted fabrics made of polyester and their blends with cellulose yarns (cotton,
+          viscose, viscose (from bamboo), Tencel® content up to 50%), raw, washed, colour knitted,
+          and finished (include hydrophobic finished); (including accessories - sewing threads,
+          zippers, printed labels, filling, non-wovens fabrics, PU foam).
         </p>
       </div>
 
@@ -853,20 +1090,21 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Social</h4>
-        <div class="footer-social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" aria-label="Mail"><i class="far fa-envelope"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="WeChat"><i class="fab fa-weixin"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="#" aria-label="Bilibili"><i class="fab fa-bilibili"></i></a>
+                <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M15 21v-7h2.5l.5-3h-3V9.5c0-1 .5-1.5 1.5-1.5H18V5.3C17.5 5.2 16.700 5 15.800 5 13.500 5 12 6.300 12 8.700V11H9.500v3H12v7"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v11M4 4.500v.5"/><path d="M9 20V9m0 4c0-2 1.500-4 4-4s4 1.500 4 4v7"/></svg></a>
+          <a href="#" aria-label="Mail"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 8l9 6 9-6M8 3h8v4H8z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.200" cy="6.800" r=".6"/></svg></a>
+          <a href="#" aria-label="WeChat"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 4C5.500 4 3 6.200 3 9c0 1.600.8 3 2.200 4L4.500 15.500 7 14.300c.6.200 1.300.3 2 .3 3.500 0 6-2.200 6-5S12.500 4 9 4z"/><path d="M15.500 10c3 0 5.500 2 5.500 4.500 0 1.400-.8 2.600-2 3.400l.5 2-2.200-1.100c-.6.200-1.200.2-1.800.2-3 0-5.500-2-5.500-4.500"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="4"/><path d="M10.500 9.500v5l4.500-2.500z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3v11.500a3.500 3.500 0 1 1-3.500-3.500M14 3c.3 2.500 2 4 4.500 4.200"/></svg></a>
+          <a href="#" aria-label="Bilibili"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M8 3l3 4M16 3l-3 4M8 12v2M16 12v2"/></svg></a>
         </div>
       </div>
     </div>
 
+  </footer>
+  <div class="footer-bar">
     <div class="footer-bottom">
       <div>© 2026 OEKO-TEX AG</div>
       <div class="legal-links">
@@ -878,16 +1116,26 @@
         <a href="#">Image rights</a>
       </div>
     </div>
-  </footer>
+  </div>
 
+  <button class="to-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+  <button class="share-btn" aria-label="Share"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 10.5l6.8-4M8.6 13.5l6.8 4"/></svg></button>
   <!-- CHATBOT BUTTON -->
   <button class="chatbot-btn">
-    <i class="fas fa-comment-dots"></i> Ask me a question
+    <svg width="22" height="22" viewBox="0 0 22 22"><path fill="#fff" d="M4 1h14a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3h-7l-5 4v-4H4a3 3 0 0 1-3-3V4a3 3 0 0 1 3-3z"/><circle cx="7.500" cy="7" r="1.600" fill="#000"/><circle cx="14.500" cy="7" r="1.600" fill="#000"/><path d="M6.500 11.500q4.500 3 9 0" stroke="#000" stroke-width="1.800" fill="none" stroke-linecap="round"/></svg> Ask me a question
   </button>
 
   <!-- SIMPLE JS: clear input -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
+      const logo = document.querySelector('.logo');
+      const onScroll = () => logo && logo.classList.toggle('is-scrolled', window.scrollY > 10);
+      window.addEventListener('scroll', onScroll, { passive: true });
+      const toTop = document.querySelector('.to-top');
+      const onScroll2 = () => toTop && toTop.classList.toggle('show', window.scrollY > 300);
+      window.addEventListener('scroll', onScroll2, { passive: true });
+      onScroll();
+      onScroll2();
       const clearBtn = document.getElementById('clear-input');
       const inputField = document.getElementById('cert-input');
 
